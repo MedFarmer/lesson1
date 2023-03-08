@@ -1,0 +1,99 @@
+class Age {
+    constructor(age) {
+        this.age = age;
+    }
+    ask_age() {
+        if (this.age >= 0 && this.age <= 12) {
+            console.log("child");
+        } else if (this.age > 12 && this.age < 18) {
+            console.log("teenage");
+        } else if (this.age >= 18 && this.age < 60) {
+            console.log("adult");
+        } else if (this.age >= 60) {
+            console.log("old man");
+        }
+    }
+}
+
+class Number {
+    constructor(number) {
+        this.number = number;
+    }
+    ask_number() {
+        switch (this.number) {
+            case 0:
+                console.log(")");
+                break;
+            case 1:
+                console.log("!");
+                break;
+            case 2:
+                console.log("@");
+                break;
+            case 3:
+                console.log("#");
+                break;
+            case 4:
+                console.log("$");
+                break;
+            case 5:
+                console.log("%");
+                break;
+            case 6:
+                console.log("^");
+                break;
+            case 7:
+                console.log("&");
+                break;
+            case 8:
+                console.log("*");
+                break;
+            case 9:
+                console.log("(");
+                break;
+        }
+    }
+}
+
+class Digits{
+    constructor(digits) {
+        this.digits = digits;
+    }
+    check_digits() {
+        let array = []
+        array =this.digits
+        array = array.split("")
+        if (array[0] === array[1] || array[0] === array[2] || array[1] === array[2]) {
+            console.log("digits repeated");
+        } else {
+            console.log("digits not repeated");
+        }
+    }
+}
+
+class LeapYear{
+    constructor(year) {
+        this.year = year;
+    }
+    checkLeapYear() {
+        if (this.year % 400 === 0 || (this.year % 4 === 0 && this.year % 100 != 0)) {
+            console.log(`${this.year} is a leap year`)
+            } else {
+            console.log(`${this.year} is not a leap year`)
+            }
+    
+    }
+}
+
+
+// const result = new Age(70);
+// result.ask_age();
+
+// const result1 = new Number(7);
+// result1.ask_number();
+
+// const result2 = new Digits("123");
+// result2.check_digits();
+
+const result3 = new LeapYear(2021);
+result3.checkLeapYear();
